@@ -1,9 +1,5 @@
 package lkijse.OnlineBookstoreApplication.controllers;
 
-
-import java.util.List;
-
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +7,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
 
-import jakarta.persistence.criteria.Order;
-import jakarta.transaction.Transactional;
 import lkijse.OnlineBookstoreApplication.dto.OrderRequest;
 import lkijse.OnlineBookstoreApplication.model.Book;
+import lkijse.OnlineBookstoreApplication.model.Order;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 import lkijse.OnlineBookstoreApplication.repository.OrderRepository;
 import lkijse.OnlineBookstoreApplication.repository.UserRepository;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/orders")
@@ -28,6 +26,9 @@ public class OrderController {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Transactional
     @PostMapping("/process")
@@ -42,13 +43,13 @@ public class OrderController {
         }
     }
 
-    private Order processOrderInternal(OrderRequest orderRequest) {
+    private jakarta.persistence.criteria.Order processOrderInternal(OrderRequest orderRequest) {
         // Extract order details from orderRequest
         List<Long> bookIds = orderRequest.getBookIds();
         Long userId = orderRequest.getUserId();
 
         // Fetch user and books from the database
-        User user = UserRepository.findById(userId).orElse(null);
+        User user = userRepository.findById(userId).orElse(null);
         List<Book> books = bookRepository.findAllById(bookIds);
 
         if (user == null || books.isEmpty()) {

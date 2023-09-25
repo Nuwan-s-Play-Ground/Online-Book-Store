@@ -5,9 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Min;
 
 @Entity
 public class Book {
@@ -65,6 +62,13 @@ public class Book {
     }
 
     public void setCategory(Object category2) {
+    }
+
+    public int getQuantity() {
+        return 0;
+    }
+
+    public void setQuantity(int i) {
     }
 
     // Constructors, getters, setters

@@ -45,7 +45,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public <T> ResponseEntity<T> loginUser(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequest) {
         // Implement user login logic here (e.g., authenticate user credentials)
         // Use Spring Security's AuthenticationManager or a custom authentication logic
 
@@ -58,7 +58,6 @@ public class AuthController {
         String token = jwtTokenUtil.generateToken(userDetails);
 
         // Return the JWT token in the response
-        return ResponseEntity.ok((T) new LoginResponse(token));
+        return ResponseEntity.ok(new LoginResponse(token));
     }
 }
-
