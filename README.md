@@ -135,5 +135,5 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 
 ## License
 
-This backend project is licensed under [LICENSE](License.txt) file for details.
+This backend project is licensed under [LICENSE](License.txt).
 
