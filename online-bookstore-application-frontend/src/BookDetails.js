@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function BookDetails({ match }) {
   const [book, setBook] = useState(null);
+  const [isAddedToCart, setIsAddedToCart] = useState(false); // Track if the book is added to the cart
 
   useEffect(() => {
     // Fetch the book details by book ID from the backend
@@ -18,10 +19,8 @@ function BookDetails({ match }) {
 
   const handleAddToCart = () => {
     // Implement the logic to add the selected book to the shopping cart
-    // You may need to make an API request to the backend to update the cart state
-    
-    <Link to={`/book/${book.id}`}>View Details</Link>
-
+    // Here, we'll set the isAddedToCart state to true as an example
+    setIsAddedToCart(true);
   };
 
   if (!book) {
@@ -37,7 +36,15 @@ function BookDetails({ match }) {
       <p>Description: {book.description}</p>
       <p>Category: {book.category}</p>
       <p>Subcategory: {book.subcategory}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
+
+      {isAddedToCart ? (
+        <p>Added to Cart</p>
+      ) : (
+        <button onClick={handleAddToCart}>Add to Cart</button>
+      )}
+
+      {/* Provide a link to view the book details */}
+      <Link to={`/book/${book.id}`}>View Details</Link>
     </div>
   );
 }

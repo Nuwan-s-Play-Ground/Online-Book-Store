@@ -2,18 +2,19 @@ import React from 'react';
 import './App.css';
 import Homepage from './Homepage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BookDetails from './BookDetails'; // Import your BookDetails component here
+import BookDetails from './BookDetails';
 
 function App() {
   return (
-    <><div className="App">
-      <Homepage />
-    </div><Router>
+    <div className="App">
+      <Router>
         <Switch>
           {/* Other routes */}
           <Route path="/book/:bookId" component={BookDetails} />
         </Switch>
-      </Router></>
+      </Router>
+      <Homepage />
+    </div>
   );
 }
 
