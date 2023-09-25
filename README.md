@@ -1,65 +1,70 @@
-# Online Bookstore Application
+# Online Bookstore Application - Frontend
 
-The Online Bookstore Application is a web-based platform that allows users to browse, search for, and purchase books online. This project consists of both the frontend and backend elements.
+This is the frontend part of the Online Bookstore Application, allowing users to browse, search, and purchase books online.
 
 ## Table of Contents
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Backend](#backend)
-- [Frontend](#frontend)
-- [Database](#database)
-- [Contributing](#contributing)
+- [Homepage and Book Listing](#homepage-and-book-listing)
+- [Book Categories](#book-categories)
+- [Book Details](#book-details)
+- [Shopping Cart](#shopping-cart)
+- [Checkout](#checkout)
+- [Responsive Design](#responsive-design)
 - [License](#license)
 
 ## Features
 
-### Backend
+### Homepage and Book Listing
 
-1. **Authentication**:
-   - User registration and login functionality using JWT tokens.
-   - Secure API endpoints to ensure only authenticated users can access them.
+1. **Homepage**:
+   - Displays a welcoming homepage.
+   - Lists featured books from various categories.
+   - Fetches and displays a list of books from the backend API.
+   
+2. **Book Listing**:
+   - Each book card shows its title, author, cover image, price, category, and subcategory.
 
-2. **Book Management**:
-   - API endpoints for CRUD operations on books.
-   - Validation for incoming book data, including title, author, price, etc.
+### Book Categories
 
-3. **Book Categories and Subcategories**:
-   - API endpoints to manage book categories and subcategories.
-   - Each category and subcategory has a name and optional description.
+3. **Navigation Menu**:
+   - Implements a navigation menu with book categories.
+   - Allows users to filter books by category and subcategory.
 
-4. **Shopping Cart and Orders**:
-   - APIs to manage the user's shopping cart, including category and subcategory details.
-   - Users can add books to the cart, view the cart, and place orders.
+### Book Details
 
-5. **Order Processing**:
-   - API endpoint to process orders.
-   - Calculates the total price and updates book quantities upon receiving an order.
+4. **Book Details Page**:
+   - Implements a page where users can view detailed information about a selected book.
+   - Shows the book's title, author, cover image, price, description, category, and subcategory.
+   - Includes an "Add to Cart" button to add the book to the cart.
 
-6. **Database**:
-   - Uses a relational database (e.g., MySQL) to store book, user, category, and subcategory data.
-   - Establishes relationships between books and categories/subcategories.
+### Shopping Cart
 
-7. **Error Handling**:
-   - Implementation of error handling and appropriate HTTP status codes for different scenarios.
+5. **Shopping Cart Page**:
+   - Creates a shopping cart page where users can view the books they've added.
+   - Displays book titles, quantities, total prices per item, categories, and subcategories.
+   - Calculates and displays the total cost of items in the cart.
 
-### Frontend
+### Checkout
 
-[Describe the features and technologies used in the frontend of your application.]
+6. **Checkout Page**:
+   - Implements a checkout page where users can review their order.
+   - Includes a form for users to enter their shipping details.
+   - Upon submitting the order, sends a request to the backend to process the purchase.
+
+### Responsive Design
+
+7. **Responsive Design**:
+   - Ensures the application is responsive and works well on both desktop and mobile devices.
 
 ## Technologies Used
 
-- Spring Boot (Backend)
-- Java (Backend)
-- Spring Security (Backend)
-- Hibernate (Backend)
-- MySQL or PostgreSQL (Database)
-- React (Frontend)
-- HTML, CSS, JavaScript (Frontend)
-- Bootstrap (Frontend)
-
-
+- React: Frontend framework for building user interfaces.
+- React Router: For client-side routing within the application.
+- Axios: For making HTTP requests to the backend API.
+- HTML/CSS: For structuring and styling the web pages.
+- Bootstrap (optional): For responsive design and UI components.
 
 # Online Bookstore Application - Backend
 
@@ -69,7 +74,6 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
 - [Authentication](#authentication)
 - [Book Management](#book-management)
 - [Book Categories and Subcategories](#book-categories-and-subcategories)
@@ -77,7 +81,6 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 - [Order Processing](#order-processing)
 - [Database](#database)
 - [Error Handling](#error-handling)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -92,7 +95,7 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 
 2. **API Endpoints for CRUD Operations**:
    - Creates API endpoints for CRUD operations on books.
-   - Each book has attributes such as title, author, price, description, category, and    subcategory.
+   - Each book has attributes such as title, author, price, description, category, and subcategory.
    - Includes validation for incoming book data.
 
 ### Book Categories and Subcategories
@@ -114,7 +117,7 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 ### Database
 
 6. **Relational Database**:
-   - Utilizes a relational database (e.g., MySQL) to store book, user, category, and subcategory data.
+   - Utilizes a relational database (e.g., MySQL, PostgreSQL) to store book, user, category, and subcategory data.
    - Establishes relationships between books and categories/subcategories.
 
 ### Error Handling
@@ -124,23 +127,13 @@ This is the backend part of the Online Bookstore Application, responsible for ma
 
 ## Technologies Used
 
-- Node.js: Backend runtime environment.
-- Express.js: Web application framework for building APIs.
+- Spring Boot: Spring Boot is a Java-based framework that simplifies the development of web   applications, including RESTful APIs. It provides built-in features for handling web requests, managing security, and connecting to databases.
 - JSON Web Tokens (JWT): For user authentication and authorization.
-- Relational Database (e.g., MySQL, PostgreSQL): For data storage.
+- Relational Database (e.g., MySQL): For data storage.
 - Sequelize (optional): ORM for interacting with the database.
 - Express Validator (optional): For request data validation.
 
-## Getting Started
-
-[Include instructions here on how to get started with the backend part of your application, including installation, setup, and running the backend server.]
-
-## Contributing
-
-[Explain how others can contribute to your backend project, including guidelines for reporting issues and submitting pull requests.]
-
-
 ## License
 
-This project is licensed under the [License Name] - see the [MIT License](License.txt) file for details.
+This backend project is licensed under [License Name] - see the [LICENSE.md](LICENSE.txt) file for details.
 
