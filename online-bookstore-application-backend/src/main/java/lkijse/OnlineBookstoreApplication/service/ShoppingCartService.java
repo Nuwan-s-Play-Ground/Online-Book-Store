@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import lkijse.OnlineBookstoreApplication.model.Book;
-import lkijse.OnlineBookstoreApplication.model.ShoppingCart;
+import lkijse.OnlineBookstoreApplication.entity.Book;
+import lkijse.OnlineBookstoreApplication.entity.ShoppingCart;
 import lkijse.OnlineBookstoreApplication.repository.AddToCartRequest;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 import lkijse.OnlineBookstoreApplication.repository.ShoppingCartRepository;

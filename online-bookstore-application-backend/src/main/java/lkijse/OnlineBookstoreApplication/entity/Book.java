@@ -1,4 +1,4 @@
-package lkijse.OnlineBookstoreApplication.model;
+package lkijse.OnlineBookstoreApplication.entity;
 
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

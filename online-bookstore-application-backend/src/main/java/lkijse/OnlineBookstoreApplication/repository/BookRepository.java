@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension;
 
-import lkijse.OnlineBookstoreApplication.model.Book;
+import lkijse.OnlineBookstoreApplication.entity.Book;
 
 public interface BookRepository extends JpaRepositoryExtension<Book, Long> {
 

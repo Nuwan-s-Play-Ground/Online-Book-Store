@@ -1,4 +1,4 @@
-package lkijse.OnlineBookstoreApplication.model;
+package lkijse.OnlineBookstoreApplication.entity;
 
 public @interface Min {
 

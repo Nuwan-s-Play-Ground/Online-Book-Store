@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import lkijse.OnlineBookstoreApplication.model.Subcategory;
+import lkijse.OnlineBookstoreApplication.entity.Subcategory;
 
 public interface SubcategoryRepository extends JpaRepository<Subcategory, Long> {
 

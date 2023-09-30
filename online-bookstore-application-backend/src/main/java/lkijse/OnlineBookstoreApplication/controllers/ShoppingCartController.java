@@ -8,7 +8,5 @@ public class ShoppingCartController {
      @Autowired
     private ShoppingCartRepository cartRepository;
 
-    // Add a book to the user's cart
-    // View the user's cart
-    // Place an order
+   
 }

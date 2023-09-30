@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import lkijse.OnlineBookstoreApplication.model.Book;
+import lkijse.OnlineBookstoreApplication.entity.Book;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 
 @RestController

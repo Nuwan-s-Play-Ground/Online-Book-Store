@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.transaction.annotation.Transactional;
 
 import lkijse.OnlineBookstoreApplication.dto.OrderRequest;
-import lkijse.OnlineBookstoreApplication.model.Book;
-import lkijse.OnlineBookstoreApplication.model.Order;
+import lkijse.OnlineBookstoreApplication.entity.Book;
+import lkijse.OnlineBookstoreApplication.entity.Order;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 import lkijse.OnlineBookstoreApplication.repository.OrderRepository;
 import lkijse.OnlineBookstoreApplication.repository.UserRepository;

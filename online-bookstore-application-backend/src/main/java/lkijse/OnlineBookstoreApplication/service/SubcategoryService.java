@@ -3,7 +3,7 @@ package lkijse.OnlineBookstoreApplication.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lkijse.OnlineBookstoreApplication.model.Subcategory;
+import lkijse.OnlineBookstoreApplication.entity.Subcategory;
 import lkijse.OnlineBookstoreApplication.repository.CategoryRepository;
 import lkijse.OnlineBookstoreApplication.repository.SubcategoryRepository;
 

@@ -4,7 +4,7 @@ package lkijse.OnlineBookstoreApplication.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lkijse.OnlineBookstoreApplication.model.Book;
+import lkijse.OnlineBookstoreApplication.entity.Book;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 import lkijse.OnlineBookstoreApplication.repository.BookRequest;
 

@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.persistence.criteria.Order;
 import lkijse.OnlineBookstoreApplication.dto.OrderRequest;
-import lkijse.OnlineBookstoreApplication.model.Book;
+import lkijse.OnlineBookstoreApplication.entity.Book;
 import lkijse.OnlineBookstoreApplication.repository.BookRepository;
 import lkijse.OnlineBookstoreApplication.repository.OrderRepository;
 import lkijse.OnlineBookstoreApplication.repository.UserRepository;
