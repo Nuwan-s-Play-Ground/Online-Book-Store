@@ -14,6 +14,7 @@ import lkijse.OnlineBookstoreApplication.repository.LoginResponse;
 import lkijse.OnlineBookstoreApplication.repository.RegisterRequest;
 import lkijse.OnlineBookstoreApplication.service.UserService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
