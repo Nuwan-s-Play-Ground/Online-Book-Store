@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:your-backend-port/api', // Replace with your backend API URL
+  baseURL: 'http://localhost:3306/bookstore', // Replace with your backend API URL
 });
 
 export const fetchBooks = () => instance.get('/books');
