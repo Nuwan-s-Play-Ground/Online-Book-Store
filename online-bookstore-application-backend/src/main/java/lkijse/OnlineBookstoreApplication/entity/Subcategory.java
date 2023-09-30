@@ -26,6 +26,15 @@ public class Subcategory {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    public void setName(Object name2) {
+    }
+
+    public void setDescription(Object description2) {
+    }
+
+    public void setCategory(java.util.Locale.Category parentCategory) {
+    }
+
    
 
   

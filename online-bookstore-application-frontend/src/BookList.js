@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchBooks, addToCart } from './api'; // Import your API functions
+import { fetchBooks, addToCart } from './api'; 
 
 function BookList() {
   const [books, setBooks] = useState([]);

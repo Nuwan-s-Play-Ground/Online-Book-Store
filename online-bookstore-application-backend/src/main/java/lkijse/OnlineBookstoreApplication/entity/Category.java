@@ -20,5 +20,11 @@ public class Category {
 
     private String description;
 
+    public void setName(Object name2) {
+    }
+
+    public void setDescription(Object description2) {
+    }
+
   
 }

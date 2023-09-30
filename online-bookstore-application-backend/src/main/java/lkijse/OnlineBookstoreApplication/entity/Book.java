@@ -38,5 +38,23 @@ public class Book {
     public void setQuantity(int i) {
     }
 
+    public void setTitle(Object title2) {
+    }
+
+    public void setAuthor(Object author2) {
+    }
+
+    public void setPrice(Object price2) {
+    }
+
+    public void setDescription(Object description2) {
+    }
+
+    public void setCategory(Object category2) {
+    }
+
+    public void setSubcategory(Object subcategory2) {
+    }
+
    
 }
