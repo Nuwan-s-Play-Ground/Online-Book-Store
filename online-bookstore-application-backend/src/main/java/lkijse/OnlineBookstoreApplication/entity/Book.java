@@ -1,13 +1,15 @@
 package lkijse.OnlineBookstoreApplication.entity;
 
-import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-
+@Getter
+@Setter
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +21,6 @@ public class Book {
     @NotBlank(message = "Author is required")
     private String author;
 
-    @Nonnull(message = "Price is required")
     @Min(value = 0, message = "Price cannot be negative")
     private Double price;
 
@@ -30,41 +31,6 @@ public class Book {
 
     private String subcategory;
 
-    public Object getTitle() {
-        return null;
-    }
-
-    public void setTitle(Object title2) {
-    }
-
-    public Object getAuthor() {
-        return null;
-    }
-
-    public void setAuthor(Object author2) {
-    }
-
-    public Object getPrice() {
-        return null;
-    }
-
-    public void setPrice(Object price2) {
-    }
-
-    public Object getDescription() {
-        return null;
-    }
-
-    public void setDescription(Object description2) {
-    }
-
-    public Object getCategory() {
-        return null;
-    }
-
-    public void setCategory(Object category2) {
-    }
-
     public int getQuantity() {
         return 0;
     }
@@ -72,5 +38,5 @@ public class Book {
     public void setQuantity(int i) {
     }
 
-    // Constructors, getters, setters
+   
 }

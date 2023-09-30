@@ -10,7 +10,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findAll();
 
-    static Optional<User> findById(Long id) {
+    default Optional<User> findById(Long id) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }

@@ -6,8 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Subcategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +26,7 @@ public class Subcategory {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public void setName(Object name2) {
-    }
+   
 
-    public void setDescription(Object description2) {
-    }
-
-    public void setCategory(java.util.Locale.Category parentCategory) {
-    }
-
-    // Constructors, getters, setters
+  
 }
